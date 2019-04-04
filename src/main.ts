@@ -5,6 +5,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 import * as utils from "@iobroker/adapter-core";
+import {PegelOnlineAPI} from "./lib/PegelOnlineAPI";
 
 // Load your modules here, e.g.:
 // import * as fs from "fs";
@@ -89,7 +90,17 @@ class Pegelonline extends utils.Adapter {
 		// result = await this.checkGroupAsync("admin", "admin");
 		// this.log.info("check group user admin group admin: " + result);
 
+		PegelOnlineAPI.fetchStations(true, true, "Weser").then((response) => {
+			if (response !== false) {
 
+				this.log.info(`Got Response from PegelOnline with ${response.length}`);
+
+				response.forEach( async (entry) => {
+
+				});
+
+			}
+		});
 
 	}
 
