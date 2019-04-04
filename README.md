@@ -15,7 +15,7 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/larsdec
 
 ## pegelonline adapter for ioBroker
 
-Read some Date from the PegelOnline API
+Read some Data from the PegelOnline API
 
 ## Changelog
 
