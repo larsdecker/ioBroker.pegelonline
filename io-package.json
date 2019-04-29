@@ -30,8 +30,8 @@
             "zh-cn": "PegelOnline"
         },
         "desc": {
-            "en": "Read some Date from the PegelOnline API",
-            "de": "Lesen Sie ein Datum aus der PegelOnline-API",
+            "en": "Read some Data from the PegelOnline API",
+            "de": "Liest einige Daten von der PegelOnline-API",
             "ru": "Прочитайте некоторую дату из API PegelOnline",
             "pt": "Ler alguma data da API PegelOnline",
             "nl": "Lees wat Datum van de PegelOnline API",
