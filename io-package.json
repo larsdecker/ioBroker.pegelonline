@@ -1,79 +1,80 @@
 {
-	"common": {
-		"name": "pegelonline",
-		"version": "0.0.1",
-		"news": {
-			"0.0.1": {
-				"en": "initial release",
-				"de": "Erstveröffentlichung",
-				"ru": "Начальная версия",
-				"pt": "lançamento inicial",
-				"nl": "Eerste uitgave",
-				"fr": "Première version",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Pierwsze wydanie",
-				"zh-cn": "首次出版"
-			}
-		},
-		"title": "PegelOnline",
-		"titleLang": {
-			"en": "PegelOnline",
-			"de": "PegelOnline",
-			"ru": "PegelOnline",
-			"pt": "PegelOnline",
-			"nl": "PegelOnline",
-			"fr": "PegelOnline",
-			"it": "PegelOnline",
-			"es": "PegelOnline",
-			"pl": "PegelOnline",
-			"zh-cn": "PegelOnline"
-		},
-		"desc": {
-			"en": "Read some Date from the PegelOnline API",
-			"de": "Lesen Sie ein Datum aus der PegelOnline-API",
-			"ru": "Прочитайте некоторую дату из API PegelOnline",
-			"pt": "Ler alguma data da API PegelOnline",
-			"nl": "Lees wat Datum van de PegelOnline API",
-			"fr": "Lire une date à partir de l'API PegelOnline",
-			"it": "Leggi qualche data dall'API PegelOnline",
-			"es": "Lea alguna fecha de la API de PegelOnline",
-			"pl": "Przeczytaj jakąś datę z API PegelOnline",
-			"zh-cn": "从PegelOnline API中读取一些日期"
-		},
-		"authors": [
-			"larsdecker <lars.decker@gmail.com>"
-		],
-		"keywords": [
-			"pegelstand",
-			"wasserstand",
-			"flussstand"
-		],
-		"license": "MIT",
-		"platform": "Javascript/Node.js",
-		"main": "build/main.js",
-		"icon": "pegelonline.png",
-		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/larsdecker/ioBroker.pegelonline/master/admin/pegelonline.png",
-		"readme": "https://github.com/larsdecker/ioBroker.pegelonline/blob/master/README.md",
-		"loglevel": "info",
-		"mode": "schedule",
-		"type": "misc-data",
-		"compact": true,
-		"materialize": true,
-		"dependencies": [
-			{
-				"admin": ">=3.0.0"
-			},
-			{
-				"js-controller": ">=1.4.2"
-			}
-		]
-	},
-	"native": {
-		"option1": true,
-		"option2": "42"
-	},
-	"objects": [],
-	"instanceObjects": []
+    "common": {
+        "name": "pegelonline",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "PegelOnline",
+        "titleLang": {
+            "en": "PegelOnline",
+            "de": "PegelOnline",
+            "ru": "PegelOnline",
+            "pt": "PegelOnline",
+            "nl": "PegelOnline",
+            "fr": "PegelOnline",
+            "it": "PegelOnline",
+            "es": "PegelOnline",
+            "pl": "PegelOnline",
+            "zh-cn": "PegelOnline"
+        },
+        "desc": {
+            "en": "Read some Date from the PegelOnline API",
+            "de": "Lesen Sie ein Datum aus der PegelOnline-API",
+            "ru": "Прочитайте некоторую дату из API PegelOnline",
+            "pt": "Ler alguma data da API PegelOnline",
+            "nl": "Lees wat Datum van de PegelOnline API",
+            "fr": "Lire une date à partir de l'API PegelOnline",
+            "it": "Leggi qualche data dall'API PegelOnline",
+            "es": "Lea alguna fecha de la API de PegelOnline",
+            "pl": "Przeczytaj jakąś datę z API PegelOnline",
+            "zh-cn": "从PegelOnline API中读取一些日期"
+        },
+        "authors": [
+            "larsdecker <lars.decker@gmail.com>"
+        ],
+        "keywords": [
+            "pegelstand",
+            "wasserstand",
+            "flussstand"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "pegelonline.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/larsdecker/ioBroker.pegelonline/master/admin/pegelonline.png",
+        "readme": "https://github.com/larsdecker/ioBroker.pegelonline/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "schedule",
+        "schedule": "*/5 * * * *",
+        "type": "weather",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "admin": ">=3.0.0"
+            },
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
 }
