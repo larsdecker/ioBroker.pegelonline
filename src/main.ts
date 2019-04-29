@@ -54,17 +54,17 @@ class Pegelonline extends utils.Adapter {
 		// Here a simple template for a boolean variable named "testVariable"
 		// Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
 		// */
-		await this.setObjectAsync("testVariable", {
-			type: "state",
-			common: {
-				name: "testVariable",
-				type: "number",
-				role: "indicator",
-				read: true,
-				write: true,
-			},
-			native: {},
-		});
+		// await this.setObjectAsync("testVariable", {
+		// 	type: "state",
+		// 	common: {
+		// 		name: "testVariable",
+		// 		type: "number",
+		// 		role: "indicator",
+		// 		read: true,
+		// 		write: true,
+		// 	},
+		// 	native: {},
+		// });
 		//
 		// // in this template all states changes inside the adapters namespace are subscribed
 		// this.subscribeStates("*");
@@ -97,7 +97,7 @@ class Pegelonline extends utils.Adapter {
 
 				response.forEach( async (entry) => {
 
-					const basePrefix = `Station.${entry.shortname}.`;
+					const basePrefix = `Station.${entry.shortname}`;
 
 					await this.setObjectNotExistsAsync(`${basePrefix}.value`,  {
 						type: "state",
