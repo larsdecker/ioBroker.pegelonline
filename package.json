@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/larsdecker/iobroker.pegelonline.git"
+    "url": "git+https://github.com/larsdecker/ioBroker.pegelonline.git"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3",
