@@ -100,10 +100,10 @@ class Pegelonline extends utils.Adapter {
 
 					const basePrefix = `Station.${entry.shortname}`;
 
-					await this.setObjectNotExistsAsync(`${basePrefix}.value`,  {
+					await this.setObjectNotExistsAsync(`${basePrefix}.number`,  {
 						type: "state",
 						common: {
-							name: `${basePrefix}.value`,
+							name: `${basePrefix}.number`,
 							type: "number",
 							role: "value",
 						},
@@ -122,7 +122,57 @@ class Pegelonline extends utils.Adapter {
 						native: {},
 					});
 
-					await this.setState(`${basePrefix}.km`, {val: entry.km, ack: true});
+					await this.setObjectNotExistsAsync(`${basePrefix}.latitude`,  {
+						type: "state",
+						common: {
+							name: `${basePrefix}.latitude`,
+							type: "number",
+							role: "value",
+						},
+						native: {},
+					});
+
+					await this.setState(`${basePrefix}.latitude`, {val: entry.latitude, ack: true});
+
+					await this.setObjectNotExistsAsync(`${basePrefix}.longitude`,  {
+						type: "state",
+						common: {
+							name: `${basePrefix}.longitude`,
+							type: "number",
+							role: "value",
+						},
+						native: {},
+					});
+
+					await this.setState(`${basePrefix}.longitude`, {val: entry.longitude, ack: true});
+
+					if (entry.timeseries.length > 0 && entry.timeseries[0]) {
+
+						await this.setObjectNotExistsAsync(`${basePrefix}.timeseries.currentMeasurement`,  {
+							type: "state",
+							common: {
+								name: `${basePrefix}.timeseries,currentMeasurement`,
+								type: "number",
+								role: "value",
+							},
+							native: {},
+						});
+
+						await this.setState(`${basePrefix}.timeseries.currentMeasurement`, {val: entry.timeseries[0].currentMeasurement, ack: true});
+
+						await this.setObjectNotExistsAsync(`${basePrefix}.timeseries.unit`,  {
+							type: "state",
+							common: {
+								name: `${basePrefix}.timeseries.unit`,
+								type: "number",
+								role: "value",
+							},
+							native: {},
+						});
+
+						await this.setState(`${basePrefix}.timeseries.unit`, {val: entry.timeseries[0].unit, ack: true});
+
+					}
 
 				});
 

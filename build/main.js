@@ -81,10 +81,10 @@ class Pegelonline extends utils.Adapter {
                     this.log.info(`Got Response from PegelOnline with ${response.length}`);
                     response.forEach((entry) => __awaiter(this, void 0, void 0, function* () {
                         const basePrefix = `Station.${entry.shortname}`;
-                        yield this.setObjectNotExistsAsync(`${basePrefix}.value`, {
+                        yield this.setObjectNotExistsAsync(`${basePrefix}.number`, {
                             type: "state",
                             common: {
-                                name: `${basePrefix}.value`,
+                                name: `${basePrefix}.number`,
                                 type: "number",
                                 role: "value",
                             },
@@ -100,7 +100,48 @@ class Pegelonline extends utils.Adapter {
                             },
                             native: {},
                         });
-                        yield this.setState(`${basePrefix}.km`, { val: entry.km, ack: true });
+                        yield this.setObjectNotExistsAsync(`${basePrefix}.latitude`, {
+                            type: "state",
+                            common: {
+                                name: `${basePrefix}.latitude`,
+                                type: "number",
+                                role: "value",
+                            },
+                            native: {},
+                        });
+                        yield this.setState(`${basePrefix}.latitude`, { val: entry.latitude, ack: true });
+                        yield this.setObjectNotExistsAsync(`${basePrefix}.longitude`, {
+                            type: "state",
+                            common: {
+                                name: `${basePrefix}.longitude`,
+                                type: "number",
+                                role: "value",
+                            },
+                            native: {},
+                        });
+                        yield this.setState(`${basePrefix}.longitude`, { val: entry.longitude, ack: true });
+                        if (entry.timeseries.length > 0 && entry.timeseries[0]) {
+                            yield this.setObjectNotExistsAsync(`${basePrefix}.timeseries.currentMeasurement`, {
+                                type: "state",
+                                common: {
+                                    name: `${basePrefix}.timeseries,currentMeasurement`,
+                                    type: "number",
+                                    role: "value",
+                                },
+                                native: {},
+                            });
+                            yield this.setState(`${basePrefix}.timeseries.currentMeasurement`, { val: entry.timeseries[0].currentMeasurement, ack: true });
+                            yield this.setObjectNotExistsAsync(`${basePrefix}.timeseries.unit`, {
+                                type: "state",
+                                common: {
+                                    name: `${basePrefix}.timeseries.unit`,
+                                    type: "number",
+                                    role: "value",
+                                },
+                                native: {},
+                            });
+                            yield this.setState(`${basePrefix}.timeseries.unit`, { val: entry.timeseries[0].unit, ack: true });
+                        }
                     }));
                 }
             });
