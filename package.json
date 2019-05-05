@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@iobroker/testing": "^1.2.0",
@@ -58,10 +59,13 @@
     "test:integration": "mocha test/integration --exit",
     "test": "npm run test:ts && npm run test:package",
     "lint": "npm run lint:ts \"src/**/*.ts\"",
-    "lint:ts": "tslint"
+    "lint:ts": "tslint",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bugs": {
     "url": "https://github.com/larsdecker/ioBroker.pegelonline/issues"
   },
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "snyk": true
 }
