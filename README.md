@@ -18,6 +18,9 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/larsdec
 Read some Data from the PegelOnline API
 
 ## Changelog
+### 0.0.2 (2019-05-06)
+* (larsdecker) Add new River Settings to the Adapter
+
 
 ### 0.0.1
 * (larsdecker) initial release

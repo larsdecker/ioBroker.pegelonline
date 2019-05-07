@@ -1,6 +1,6 @@
 {
   "name": "iobroker.pegelonline",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Read some Date from the PegelOnline API",
   "author": {
     "name": "larsdecker",

@@ -76,7 +76,7 @@ class Pegelonline extends utils.Adapter {
             //
             // result = await this.checkGroupAsync("admin", "admin");
             // this.log.info("check group user admin group admin: " + result);
-            PegelOnlineAPI_1.PegelOnlineAPI.fetchStations(true, true, "Weser").then((response) => {
+            PegelOnlineAPI_1.PegelOnlineAPI.fetchStations(true, true, this.config.river || "Weser").then((response) => {
                 if (response !== false) {
                     this.log.info(`Got Response from PegelOnline with ${response.length}`);
                     response.forEach((entry) => __awaiter(this, void 0, void 0, function* () {

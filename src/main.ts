@@ -16,8 +16,7 @@ declare global {
 	namespace ioBroker {
 		interface AdapterConfig {
 			// Define the shape of your options here (recommended)
-			option1: boolean;
-			option2: string;
+			river: string;
 			// Or use a catch-all approach
 			[key: string]: any;
 		}
@@ -91,7 +90,7 @@ class Pegelonline extends utils.Adapter {
 		// result = await this.checkGroupAsync("admin", "admin");
 		// this.log.info("check group user admin group admin: " + result);
 
-		PegelOnlineAPI.fetchStations(true, true, "Weser").then((response) => {
+		PegelOnlineAPI.fetchStations(true, true, this.config.river ||  "Weser").then((response) => {
 			if (response !== false) {
 
 				this.log.info(`Got Response from PegelOnline with ${response.length}`);
