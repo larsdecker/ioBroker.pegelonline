@@ -6,27 +6,14 @@ patch:
   SNYK-JS-AXIOS-174505:
     - axios:
         patched: '2019-05-05T21:08:16.161Z'
-  SNYK-JS-HTTPSPROXYAGENT-469131:
-    - snyk > proxy-agent > https-proxy-agent:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
-        patched: '2019-10-16T11:27:07.453Z'
   SNYK-JS-LODASH-450202:
-    - snyk > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > snyk-config > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > snyk-nuget-plugin > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > @snyk/dep-graph > graphlib > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > inquirer > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > snyk-nodejs-lockfile-parser > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > snyk-go-plugin > graphlib > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
-    - snyk > @snyk/dep-graph > lodash:
-        patched: '2019-10-16T11:27:07.453Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-16T11:28:58.603Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-16T11:28:58.603Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-16T11:28:58.603Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-16T11:28:58.603Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-16T11:28:58.603Z'
