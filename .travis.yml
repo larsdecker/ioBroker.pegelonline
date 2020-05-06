@@ -4,9 +4,10 @@ os:
   - windows
 language: node_js
 node_js:
-  - '8'
   - '10'
   - '12'
+  - '13'
+  - '14'
 env:
   - CXX=g++-4.8
 addons:
